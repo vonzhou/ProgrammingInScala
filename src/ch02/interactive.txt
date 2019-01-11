@@ -1,0 +1,58 @@
+~ scala
+Welcome to Scala version 2.11.7 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_65).
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> 1 + 2
+res0: Int = 3
+
+scala> res0 * 3
+res1: Int = 9
+
+scala>  println("Hello, world!")
+Hello, world!
+
+scala> val msg = "Hello, world!"
+msg: String = Hello, world!
+
+scala> val msg2: java.lang.String = "Hello again, world!"
+msg2: String = Hello again, world!
+
+scala> val msg3: String = "Hello yet again, world!"
+msg3: String = Hello yet again, world!
+
+scala>  println(msg)
+Hello, world!
+
+scala> msg = "Goodbye cruel world!"
+<console>:11: error: reassignment to val
+       msg = "Goodbye cruel world!"
+           ^
+
+scala> var greeting = "Hello, world!"
+greeting: String = Hello, world!
+
+scala> greeting = "Leave me alone, world!"
+greeting: String = Leave me alone, world!
+
+scala> val multiLine =
+     | "This is the next line."
+multiLine: String = This is the next line.
+
+scala> def max(x: Int, y: Int): Int = {
+     | if (x > y) x
+     | else y
+     | }
+max: (x: Int, y: Int)Int
+
+scala>  def max(x: Int, y: Int) = if (x > y) x else y
+max: (x: Int, y: Int)Int
+
+scala> max(3, 5)
+res4: Int = 5
+
+scala> def greet() = println("Hello, world!")
+greet: ()Unit
+
+scala> :quit
+
