@@ -15,3 +15,8 @@ scala -nc hello.scala
 hello: -20
 scala: -4
 ```
+
+
+## 19. Type Parameterization
+
+TODO 19.5
