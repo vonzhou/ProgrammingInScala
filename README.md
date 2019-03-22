@@ -16,7 +16,43 @@ hello: -20
 scala: -4
 ```
 
+## 16. Working with Lists
+
+## 17. Working with other Collections
+
+## 18. Mutable Objects
 
 ## 19. Type Parameterization
 
-TODO 19.5
+## 20. Abstract Members
+
+```Scala
+scala> trait Abstract {
+     |   type T
+     |
+     |   def transform(x: T): T
+     |
+     |   val initial: T
+     |
+     |   var current: T
+     | }
+defined trait Abstract
+
+scala> class Concrete extends Abstract {
+     |   type T = String
+     |
+     |   def transform(x: String) = x + x
+     |
+     |   val initial = "hi"
+     |   var current = initial
+     | }
+defined class Concrete
+
+scala>
+
+scala> println(new Concrete().transform("vonzhou"))
+vonzhouvonzhou
+```
+
+
+TODO 20.5
