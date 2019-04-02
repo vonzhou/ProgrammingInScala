@@ -75,3 +75,43 @@ Predef:
   }
 ```
 
+22. Implementing Lists
+
+2个子类：:: 和 Nil
+
+covariant
+
+```scala
+val xs = List(1,2,3)
+var ys:List[Any] = xs
+println(ys)
+```
+
+
+List定义了3个抽象方法：
+
+```scala
+ def isEmpty: Boolean
+  def head: A
+  def tail: List[A]
+```
+
+
+:: 方法的参数类型有一个lower bound，交互模式下运行：
+
+```scala
+scala> abstract class Fruit
+defined class Fruit
+
+scala> class Apple extends Fruit
+defined class Apple
+
+scala> class Orange extends Fruit
+defined class Orange
+
+scala> val apples = new Apple :: Nil
+apples: List[Apple] = List(Apple@1224e1b6)
+
+scala> val fruits = new Orange :: apples
+fruits: List[Fruit] = List(Orange@61d09475, Apple@1224e1b6)
+```
