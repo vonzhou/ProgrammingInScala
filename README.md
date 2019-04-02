@@ -16,6 +16,45 @@ hello: -20
 scala: -4
 ```
 
+
+## 1. A Scalable Language
+
+语言命名
+
+## 2. First Steps in Scala
+
+写点脚本
+
+## 3. Next Steps in Scala
+
+使用List,Tuple,Set,Map
+
+读文件
+
+## 4. Classes and Objects
+
+## 5. Basic Types and Operations
+
+## 6. Functional Objects
+
+## 7. Built-in Control Structures
+
+## 8. Functions and Closures
+
+## 9. Control Abstractions
+
+## 10. Composition and Inheritance
+
+## 11. Scala's Hierarchy
+
+## 12. Traits
+
+## 13. Packages and Imports
+
+## 14. Assertions and Tests
+
+## 15. Case Classes and Pattern Matching
+
 ## 16. Working with Lists
 
 ## 17. Working with other Collections
