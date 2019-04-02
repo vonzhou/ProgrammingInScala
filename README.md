@@ -75,7 +75,7 @@ Predef:
   }
 ```
 
-22. Implementing Lists
+## 22. Implementing Lists
 
 2个子类：:: 和 Nil
 
@@ -115,3 +115,27 @@ apples: List[Apple] = List(Apple@1224e1b6)
 scala> val fruits = new Orange :: apples
 fruits: List[Fruit] = List(Orange@61d09475, Apple@1224e1b6)
 ```
+
+ListBuffer的实现：
+
+```scala
+  def += (x: A): this.type = {
+    if (exported) copy()
+    if (isEmpty) {
+      last0 = new :: (x, Nil)
+      start = last0
+    } else {
+      val last1 = last0
+      last0 = new :: (x, Nil)
+      // 注意 :: 类构造器参数 tl 是var
+      last1.tl = last0
+    }
+    len += 1
+    this
+  }
+```
+
+> The design of Scala's List and ListBuffer is quite similar to what's done in Java's pair of classes String and StringBuffer.
+
+## 23. For Expression Revisited
+
