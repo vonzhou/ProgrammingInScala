@@ -178,3 +178,6 @@ ListBuffer的实现：
 
 ## 23. For Expression Revisited
 
+for 表达式最终都会被scala 编译器转换成map, flatMap, withFilter。
+
+## 24. Collections in depth
